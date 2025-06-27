@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from studio.models import Master, JewelryType, Jewelry
+
+admin.site.register(Master)
+admin.site.register(JewelryType)
+admin.site.register(Jewelry)

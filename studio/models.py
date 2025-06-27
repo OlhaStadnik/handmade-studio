@@ -5,7 +5,7 @@ from handmade_studio import settings
 
 
 class Master(AbstractUser):
-    experience_years = models.IntegerField()
+    experience_years = models.IntegerField(null=True, blank=True)
     biography = models.TextField(blank=True)
 
     class Meta:

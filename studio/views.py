@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
+from studio.forms import MasterCreationForm
 from studio.models import JewelryType, Jewelry, Master
 
 @login_required
@@ -71,5 +72,6 @@ class MasterDetailView(LoginRequiredMixin ,generic.DetailView):
 
 class MasterCreateView(LoginRequiredMixin ,generic.CreateView):
     model = Master
+    form_class = MasterCreationForm
 
 
